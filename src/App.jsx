@@ -31,20 +31,9 @@ function App() {
   return (
     <main className={appClassName}>
       <div className="container">
-        <header className="top-header">
-          <div>
-            <h1>PastelPDF</h1>
-            <p>Turn your favorite images into one cute, polished PDF.</p>
-          </div>
-          <button
-            type="button"
-            className="theme-icon-btn"
-            onClick={() => setDarkMode((prev) => !prev)}
-            aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-            title={darkMode ? 'Light mode' : 'Dark mode'}
-          >
-            <span aria-hidden="true">{darkMode ? '☀️' : '🌙'}</span>
-          </button>
+        <header>
+          <h1>PastelPDF</h1>
+          <p>Turn your favorite images into one cute, polished PDF.</p>
         </header>
 
         <FileDropZone
@@ -56,7 +45,12 @@ function App() {
 
         {error ? <p className="error-banner">{error}</p> : null}
 
-        <ExportSettings settings={settings} onSettingsChange={onSettingsChange} />
+        <ExportSettings
+          settings={settings}
+          onSettingsChange={onSettingsChange}
+          darkMode={darkMode}
+          onToggleDarkMode={() => setDarkMode((prev) => !prev)}
+        />
 
         {hasImages ? (
           <>

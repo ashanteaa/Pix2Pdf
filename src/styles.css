@@ -31,13 +31,6 @@ body {
   gap: 1rem;
 }
 
-.top-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
 header h1 {
   margin-bottom: 0.2rem;
   font-size: clamp(2rem, 3vw, 2.8rem);
@@ -66,35 +59,6 @@ header p {
 .dark .error-banner {
   background: rgba(53, 45, 76, 0.74);
   box-shadow: 0 12px 26px rgba(18, 16, 28, 0.4);
-}
-
-.theme-icon-btn {
-  border: 1px solid #d6cbf8;
-  border-radius: 999px;
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 8px 20px rgba(152, 145, 242, 0.22);
-  cursor: pointer;
-  transition: transform 180ms ease, box-shadow 180ms ease;
-  font-size: 1.15rem;
-}
-
-.theme-icon-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 12px 24px rgba(152, 145, 242, 0.3);
-}
-
-.theme-icon-btn:active {
-  transform: scale(0.96);
-}
-
-.dark .theme-icon-btn {
-  border-color: #7f79b5;
-  background: rgba(73, 63, 99, 0.9);
-  box-shadow: 0 10px 18px rgba(18, 16, 28, 0.48);
 }
 
 .drop-zone {
@@ -145,12 +109,14 @@ label {
 
 select,
 input[type='range'],
+.toggle-btn,
 .primary-btn,
 .card-meta button {
   font: inherit;
 }
 
-select {
+select,
+.toggle-btn {
   border: 1px solid #d6cbf8;
   border-radius: 12px;
   padding: 0.5rem 0.7rem;
@@ -235,13 +201,13 @@ select {
   opacity: 0.72;
 }
 
+.toggle-row {
+  align-content: end;
+}
+
 @media (max-width: 720px) {
   .app-shell {
     padding-top: 1.2rem;
-  }
-
-  .top-header {
-    align-items: center;
   }
 
   .drop-zone {

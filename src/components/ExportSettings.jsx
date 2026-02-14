@@ -1,6 +1,6 @@
 import { ORIENTATIONS, PAGE_SIZES } from '../utils/constants';
 
-function ExportSettings({ settings, onSettingsChange }) {
+function ExportSettings({ settings, onSettingsChange, darkMode, onToggleDarkMode }) {
   return (
     <section className="panel">
       <h2>Export Settings</h2>
@@ -40,6 +40,13 @@ function ExportSettings({ settings, onSettingsChange }) {
             value={settings.margin}
             onChange={(e) => onSettingsChange('margin', Number(e.target.value))}
           />
+        </label>
+
+        <label className="toggle-row">
+          Dark pastel mode
+          <button type="button" className="toggle-btn" onClick={onToggleDarkMode}>
+            {darkMode ? 'On' : 'Off'}
+          </button>
         </label>
       </div>
     </section>
