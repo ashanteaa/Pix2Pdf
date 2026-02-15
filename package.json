@@ -1,5 +1,5 @@
 {
-  "name": "pastelpdf",
+  "name": "pix2pdf",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -12,7 +12,8 @@
     "jspdf": "^2.5.2",
     "react": "^18.3.1",
     "react-beautiful-dnd": "^13.1.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "roughjs": "^4.6.6"
   },
   "devDependencies": {
     "vite": "^5.4.11"
