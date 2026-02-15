@@ -1,6 +1,6 @@
-# PastelPDF
+# Pix2Pdf
 
-PastelPDF is a pastel-themed React app that converts multiple images into a single downloadable PDF.
+Pix2Pdf is a pastel-themed React app that converts multiple images into a single downloadable PDF.
 
 ## Features
 
@@ -9,7 +9,7 @@ PastelPDF is a pastel-themed React app that converts multiple images into a sing
 - Image preview grid and per-image removal
 - PDF generation with `jsPDF`
 - Image compression before adding to PDF
-- Orientation (portrait/landscape), page size (A4/Letter), and margin settings
+- Orientation (portrait/landscape), page size (/A3/A4/A5/LegalLetter), and margin settings
 - Loading state during export
 - Friendly validation errors for unsupported or oversized files
 - Optional dark pastel mode
